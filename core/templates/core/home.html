@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<div class="row bg-body-tertiary shadow">
+    <div class="col-sm-8 text-center mt-5">
+        <h1 class="display-4 fw-bold">Akhilesh Kumar Singh</h1>
+        <strong>Python/Django Developer | Web Developer</strong>
+    </div>
+    <div class="col-sm-4 text-center">
+        <img src="{% static 'images/profile.jpg' %}" class="img-fluid rounded-circle pt-2" alt="profilepic" width="150px" height="150px">
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-10 offset-1 mt-3">
+        <h2 class="text-center mb-4 fw-bold">About Me</h2>
+        <h4 class="fst-italic">Hello,</h4>
+        <p style="text-indent: 75px;">My name is Akhilesh Kumar Singh, a Junior Python Developer currently lending my expertise to the vibrant team at SI Internations. My professional journey is marked by hands-on experience in Python, Django, MySQL, and various web technologies.</p>
+        <p>As a Junior Python Developer at SI Internations, I actively contribute to a spectrum of projects. My responsibilities include designing and maintenance of software sysytem and debuging, and I specialize in the development of robust solutions utilizing Python, Django, and MySQL. My work in web technologies extends to projects such as e-commerce platforms, blogs, and an efficient expense tracker.</p>
+        <p>I graduated with a B.Tech in Computer Science from SHEAT College of Engineering Babatpur Varanasi, acquiring a comprehensive understanding of programming languages, algorithms, and software development practices.</p>
+        <p>During my academic journey, I actively participated in TechnoParv-2K18, a volunteering initiative that significantly enriched my practical knowledge and interpersonal skills. Through this experience, I had the opportunity to coordinating, showcasing my commitment to community engagement and collaborative problem-solving.</p>
+    </div>
+</div>
+{% endblock content %}

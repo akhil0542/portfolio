@@ -1,0 +1,8 @@
+.cardbody-color{
+    background-color: #ebf2fa;
+  }
+
+.card{
+    max-height: 400px;
+    overflow-y: scroll;
+} 

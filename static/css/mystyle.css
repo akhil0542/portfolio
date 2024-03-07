@@ -1,0 +1,49 @@
+/* first way */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 100svh;
+}
+footer {
+    margin-top: auto;
+}
+
+/* second way */
+/* body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+} */
+
+/* third way */
+/* body{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 2.5rem;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+} */
+a.nav-link{
+    color: whitesmoke;
+}
+
+a.nav-link:hover{
+    color: black;
+    background-color: rgb(225, 166, 17);
+    border-radius: 10px;
+}
+a.nav-link.active{
+    color: black;
+    background-color: green;
+    font-weight: bold;
+    border-radius: 10px;
+    outline: darkblue;
+    box-shadow: 1px 1px 2px whitesmoke;
+}

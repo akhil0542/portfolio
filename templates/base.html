@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio{% endblock title %}</title>
+    <script src="{% static 'css/all.min.css' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    {% block corecss %}
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    {% endblock corecss %}
+    <style>
+    </style>
+</head>
+<body class="bg-dark-subtle">
+        <header>
+            {% include 'navbar.html' %}
+        </header>
+        <main class="bg-dark-subtle px-5">{% block content %}{% endblock content %}</main>
+        <footer class="bg-dark text-white text-center p-2">
+            <script>
+                document.write("&copy; " + new Date().getFullYear() + " Akhilesh Kumar Singh. All rights reserved.");
+            </script>
+        </footer>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

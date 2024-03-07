@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Project-List{% endblock title %}
+{% block corecss %}
+{{ block.super }}<link rel="stylesheet" href="{% static 'projects/css/project.css' %}">
+{% endblock corecss %}
+{% block content %}
+<h1 class="mt-5 border-bottom border-white">Projects</h1>
+{% if request.user.is_authenticated %}
+<span><a href="{% url 'add_project' %}" class="btn btn-primary">Add Project</a></span>
+{% endif %}
+<div class="row">
+  {% if projects %}
+  {% for project in projects %}
+  <div class="col-sm-4">
+      <div class="card shadow mt-5">
+          {% if project.image %}
+          <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}" width="300px" height="300px">
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{project.title}}</h5>
+            <p class="card-text">{{project.description}}</p>
+            <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary btn-sm btn-outline-warning">read more</a>
+          </div>
+        </div>
+  </div>
+  {% endfor %}
+  {% else %}
+  <div class="col-sm-12 text-center">
+    <h1 class="text-center text-danger fw-bold mb-3">No Project Found</h1>
+    <img src="{% static 'projects/images/error.png' %}" alt="error">
+  </div>
+  {% endif %}
+</div>
+{% endblock content %}
