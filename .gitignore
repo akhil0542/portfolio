@@ -1,1 +1,42 @@
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Django specific
+*.log
+db.sqlite3
+media/
+
+# Ignore local settings
+local_settings.py
+
+# Ignore generated files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore database migrations
+/migrations/
+
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE specific files
+.vscode/
+*.idea/
+*.pycharm/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore environment file
 .env
